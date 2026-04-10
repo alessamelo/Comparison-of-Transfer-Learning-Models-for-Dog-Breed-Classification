@@ -1,4 +1,4 @@
-# Comparison-of-Transfer-Learning-Models-for-Dog-Breed-Classification
+# Comparison of Transfer Learning Models for Dog Breed Classification
 
 This repository presents an **experimental comparison of transfer learning approaches for dog breed classification**. The project evaluates two different strategies built on top of pretrained convolutional neural networks:
 
@@ -8,8 +8,6 @@ This repository presents an **experimental comparison of transfer learning appro
 Both approaches rely on **transfer learning**, where pretrained CNN models are used as **feature extractors**, reducing training cost while leveraging representations learned from large datasets such as ImageNet. The extracted features are then used by different classifiers to perform the final breed prediction.
 
 The models are evaluated using **accuracy, precision, recall, and F1-score**, and the results are visualized through comparative plots.
-
----
 
 # Project Architecture
 
@@ -43,7 +41,6 @@ Visualization and Results Comparison
 
 ```
 
----
 
 # Repository Structure
 
@@ -70,13 +67,6 @@ These files are later loaded to generate performance comparisons and plots.
 This module contains the **image collection pipeline** used to download dog breed images directly from **Bing Image Search**.  
 It automates dataset generation using keyword-based queries.
 
-Responsibilities:
-- Query Bing image search
-- Download images for each dog breed
-- Organize images into dataset folders
-
----
-
 ### `NASnet_VGG/`
 Implements the **NASNet-based transfer learning pipeline**.
 
@@ -102,7 +92,6 @@ Dog Breed Prediction
 
 ```
 
----
 
 ### `Xception_VGG/`
 Implements the **Xception-based ensemble approach**.
@@ -135,8 +124,6 @@ Dog Breed Prediction
 
 The ensemble combines predictions using **hard voting**, where the final prediction corresponds to the class predicted by the majority of models.
 
----
-
 ### `Results/`
 Contains scripts and outputs used to **compare model performance**.
 
@@ -149,7 +136,6 @@ This module:
 
 These visualizations help analyze **which transfer learning strategy performs better**.
 
----
 
 # Evaluation Metrics
 
@@ -162,19 +148,4 @@ The models are evaluated using standard classification metrics:
 
 All metrics are stored in JSON format and later used for visualization.
 
----
 
-# Key Concepts Used in the Project
-
-- **Transfer Learning**
-- **Feature Extraction with CNNs**
-- **Ensemble Learning**
-- **Multilayer Perceptrons**
-- **Model Evaluation and Visualization**
-
----
-
-# Summary
-
-This project explores how **different classifiers perform when combined with transfer learning feature extractors** for image classification. By comparing **NASNet + MLP** with **Xception + VotingClassifier**, the repository demonstrates how ensemble learning and pretrained CNN features can improve classification performance while reducing computational costs compared to training deep networks from scratch.
-```
