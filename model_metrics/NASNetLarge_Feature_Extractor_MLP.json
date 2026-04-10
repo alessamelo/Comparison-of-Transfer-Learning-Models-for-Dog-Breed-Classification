@@ -1,0 +1,8 @@
+{
+    "model": "NASNetLarge_Feature_Extractor",
+    "configuration": "MLP",
+    "accuracy": 0.9696969696969697,
+    "precision": 0.9740259740259739,
+    "recall": 0.9696969696969697,
+    "f1_score": 0.96985236985237
+}
